@@ -1,12 +1,14 @@
 
-Cyber ​​Diamond Ring: Using blockchain as a melting pot, destroying tokens to forge eternal love - enter the names of both parties to generate a unique encrypted love certificate, making each destruction a romantic atomic reorganization of the metaverse
+# Desc
+X ​​Diamond Ring: Using blockchain as a melting pot, destroying tokens to forge eternal love - enter the names of both parties to generate a unique encrypted love certificate, making each destruction a romantic atomic reorganization of the metaverse
 
 赛博钻戒：以区块链为熔炉，销毁token铸刻永恒之爱——输入双方姓名，生成独一无二的加密爱情凭证，让每一次销毁都成为元宇宙的浪漫原子重组
 
-# install avalanche-l1 cli
+# deploy step
+## install avalanche-l1 cli
 curl -sSfL https://raw.githubusercontent.com/ava-labs/avalanche-cli/main/scripts/install.sh | sh -s
 
-# set avalanche-l1 env to PATH
+## set avalanche-l1 env to PATH
 echo 'export PATH=~/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 
@@ -14,31 +16,31 @@ source ~/.bashrc
 echo 'export PATH=~/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
-# create chain
+## create chain
 avalanche blockchain create ringchain
 
-# choose vm
+## choose vm
 Subnet-EVM
 
-# choose validator management type
+## choose validator management type
 Proof Of Authority
 
-# choose address do you want to enable
+## choose address do you want to enable
 Get address from an existing stored key (created from avalanche key create or avalanche key import)
 
-# choose address key as controller of ValidatorManager contract, (ewoq is publicly exposed for localhost test)
+## choose address key as controller of ValidatorManager contract, (ewoq is publicly exposed for localhost test)
 ewoq
 
-# choose default values for the Blockchain configuration
+## choose default values for the Blockchain configuration
 I want to use defaults for a test environment
 
-# import chainid
+## import chainid
 214
 
-# set Token Symbol
+## set Token Symbol
 RING
 
-# then, we create chain sucess
+## then, we create chain sucess
 ```
 % avalanche blockchain create ringchain
 ✔ Subnet-EVM
@@ -57,7 +59,7 @@ File /Users/liyihang/.avalanche-cli/subnets/ringchain/chain.json successfully wr
 Run 'avalanche blockchain describe' to view all created addresses and what their roles are
 ```
 
-# deploy chain
+## deploy chain
 avalanche blockchain deploy ringchain --local
 
 ```
@@ -255,28 +257,31 @@ This does not affect L1 operations besides Interchain Messaging
 ✓ L1 is successfully deployed on Local Network
 ```
 
-# add local testnet to metamask
+## add local testnet to metamask
 ![alt text](image.png)
 
-# import test key to metamask
+## import test key to metamask
 56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027
 
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 
-# create ring.sol
+## create ring.sol
 ![alt text](image-4.png)
 
-# compile ring.sol
+## compile ring.sol
 ![alt text](image-3.png)
 
-# deploy ring.sol
+## deploy ring.sol
 ![alt text](image-5.png)
 ![alt text](image-6.png)
 
-# call CyberDiamondRing
+## call CyberDiamondRing
 ![alt text](image-7.png)
 ![alt text](image-8.png)
 
-# get CyberDiamondRing nft info
+## get CyberDiamondRing nft info
 ![alt text](image-9.png)
+
+# demo video
+https://youtu.be/kxneQrCfYgs

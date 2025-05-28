@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 contract CyberDiamondRing is ERC721, Ownable, ReentrancyGuard {
     // 状态变量
@@ -84,6 +84,15 @@ contract CyberDiamondRing is ERC721, Ownable, ReentrancyGuard {
         require(_ownerOf(tokenId) != address(0), "Token does not exist");
         CoupleInfo memory info = coupleInfos[tokenId];
         return (info.partner1, info.partner2, info.timestamp);
+    }
+
+    // 获取已铸造的NFT总数
+    function getTotalMinted() 
+        public 
+        view 
+        returns (uint256) 
+    {
+        return _tokenIds;
     }
     
     // 重写tokenURI函数,返回元数据
